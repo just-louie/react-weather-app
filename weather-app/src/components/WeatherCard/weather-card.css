@@ -1,0 +1,157 @@
+.weather-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.weather-header h2 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.location-details {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0.5rem 0;
+}
+
+.local-time {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0.25rem 0;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.weather-icon {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.weather-icon-emoji {
+  font-size: 120px;
+  line-height: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.temperature h1 {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.feels-like {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0.5rem 0 0 0;
+}
+
+.condition {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem 0;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.air-quality {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.air-quality h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.air-quality-details {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .weather-card {
+    padding: 1.5rem;
+  }
+
+  .weather-header h2 {
+    font-size: 2rem;
+  }
+
+  .temperature h1 {
+    font-size: 3rem;
+  }
+
+  .weather-main {
+    gap: 1rem;
+  }
+
+  .weather-icon,
+  .weather-icon-emoji {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+  }
+}

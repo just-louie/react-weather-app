@@ -1,0 +1,128 @@
+.forecast {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease-out 0.2s both;
+}
+
+.forecast h2 {
+  color: white;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.forecast-day {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s, background 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.forecast-date {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.forecast-date .day {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.forecast-date .date {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.forecast-icon {
+  font-size: 64px;
+  margin: 1rem 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.forecast-condition {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forecast-temp {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.temp-max {
+  font-weight: 700;
+}
+
+.temp-min {
+  opacity: 0.7;
+}
+
+.forecast-precip {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.no-rain {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .forecast {
+    padding: 1.5rem;
+  }
+
+  .forecast h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .forecast-day {
+    padding: 1rem;
+  }
+
+  .forecast-icon {
+    font-size: 48px;
+    margin: 0.75rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .forecast-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,16 +1,82 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, real-time weather application built with React and powered by [Open-Meteo](https://open-meteo.com/) - a free, open-source weather API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌡️ Real-time weather data for any city worldwide
+- 💨 Detailed weather metrics (wind, humidity, pressure, precipitation, cloud cover)
+- 📱 Responsive design for all devices
+- ✨ Beautiful gradient UI with smooth animations
+- 🔓 **No API key required!** - Completely free to use
 
-## React Compiler
+## Setup Instructions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Install Dependencies
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Run the App
+
+```bash
+npm run dev
+```
+
+The app will open at `http://localhost:5173`
+
+## How to Use
+
+1. Enter any city name in the search bar
+2. Press Enter or click the Search button
+3. View detailed weather information including:
+   - Current temperature and feels like temperature
+   - Weather conditions with emoji icons
+   - Wind speed and direction
+   - Humidity and pressure
+   - Precipitation and cloud cover
+
+## Technologies Used
+
+- **React** - Frontend framework
+- **Vite** - Build tool
+- **Open-Meteo** - Free weather data API (no API key required!)
+
+## API Features Used
+
+- Geocoding API for city search
+- Current weather data with hourly resolution
+- WMO weather codes with emoji representations
+- Automatic timezone detection
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── SearchBar/
+│   │   ├── SearchBar.jsx
+│   │   └── search-bar.css
+│   └── WeatherCard/
+│       ├── WeatherCard.jsx
+│       └── weather-card.css
+├── services/
+│   └── weatherService.js
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
+```
+
+## Why Open-Meteo?
+
+- **Completely Free** - No API key or registration required
+- **Open Source** - Transparent and community-driven
+- **High Accuracy** - Data from national weather services
+- **No Rate Limits** - Up to 10,000 calls/day for free
+- **Privacy Friendly** - No tracking or data collection
+
+## License
+
+MIT
